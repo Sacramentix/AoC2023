@@ -23,7 +23,7 @@ const result = lines.reduce((acc,line)=>{ // we iterate over each line and add .
                             return subsetAcc;
                         }, gameAcc)
                     , [0,0,0])
-                    .reduce((acc,colorPower, i) => acc*colorPower,1); // we multiply each color highest quanity together [r,g,b] => 1*r*g*b, that will be added to previous game
+                    .reduce((acc,colorPower, i) => acc*colorPower,1); // we multiply each color highest quantity together [r,g,b] => 1*r*g*b, that will be added to previous game
 },0);
 
 console.log(result);
