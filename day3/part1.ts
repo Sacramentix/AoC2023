@@ -1,3 +1,4 @@
+// See part 2 for comment
 const input = Deno.readTextFileSync("./input.txt");
 
 const lines = input.split(/\r?\n/).map(line=>line.replaceAll(/[^\.0-9]/g,'X').split(""));
@@ -29,7 +30,6 @@ function iterateNeighbor(x:number, y:number, n:string) {
         for (let dy=y-1;dy<=(y+1);dy++) {
             i++;
             if (skipCell(i)) continue;
-            // console.log(`dx: ${dx} dy: ${dy} i: ${i}`);
             const cell = lines[dy]?.[dx];
             if (cell == 'X') {
                 let result = n;
@@ -49,7 +49,6 @@ function iterateNeighbor(x:number, y:number, n:string) {
     if (digits.includes(rightCell)) return iterateNeighbor(x+1,y,n+rightCell);
     coord.x = x+1;
     if (rightCell == 'X') return Number(n);
-    console.log(`x: ${x} y: ${y} n: ${n}`);
     return -1;
 }
 
