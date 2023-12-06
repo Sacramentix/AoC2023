@@ -17,6 +17,13 @@
                 "--allow-all"
             ],
             "attachSimplePort": 9229
-        }
+        },
+        {
+            "cwd": "${workspaceFolder}/day5",
+            "command": "npm run dev",
+            "name": "Debug Node",
+            "request": "launch",
+            "type": "node-terminal"
+        },
     ]
 }
